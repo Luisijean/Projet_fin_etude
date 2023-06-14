@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Churn Prediction - Index Page</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'store/css_styles.css' %}" type="text/css">
+
+</head>
+
+<body>
+	<div class="imgbox">
+			<img class="image" src="{% static 'store/churn_im.png' %}"/>
+	</div>
+	<img class="grad" src="{% static 'store/gradient.PNG' %}"/>
+
+	<ul>
+
+		<li><a class="active" href="{% url 'index_movie_prediction' %}">HOME</a></li>
+  		<li><a href="{% url 'projet' %}">PROJECT</a></li>
+  		<li><a href="{% url 'simulation' %}">SIMULATION</a></li>
+  		<li style="float:right"><a href="{% url 'about' %}">ABOUT</a></li>
+	</ul>
+	
+	<br><br><br><br>
+	
+	
+	<img id="img_2" src="{% static 'store/churn_im_2.png' %}"/>
+	
+	<div class="para_1">
+		<h3>CHURN?</h3>
+		<p class="text">
+			Le taux de désabonnement( ou Churn) est le pourcentage de clients qui ont cessé d'utiliser le produit ou le service de votre entreprise pendant un certain laps de temps. <br> <br>Vous pouvez calculer le taux de désabonnement en divisant le nombre de clients que vous avez perdus au cours de cette période, par exemple un trimestre, par le nombre de clients que vous aviez au début de cette période. <br> <br>Votre entreprise doit viser un taux de désabonnement aussi proche que possible de 0%. <br> <br>Pour ce faire, votre entreprise doit être au top de son taux de désabonnement à tout moment et le traiter comme une priorité absolue.
+		</p>
+	</div>
+	
+	
+
+	
+	<br><br><br><br>
+	
+	
+	<img id="img_3" src="{% static 'store/churn_im_3.png' %}"/>
+	
+	<div class="para_2">
+		<h3 id="title_2">POURQUOI LE CHURN EST-IL IMPORTANT?</h3>
+		<p class="text">
+			Le taux de désabonnement est important car il coûte plus cher d'acquérir de nouveaux clients que de fidéliser les clients existants. <br> <br>En fait, une augmentation de la fidélisation de la clientèle de seulement 5% peut générer une augmentation d'au moins 25% des bénéfices. <br> <br>En effet, les clients qui reviennent dépenseront probablement 67% de plus pour les produits et services de votre entreprise. <br> <br>En conséquence, votre entreprise peut dépenser moins sur les coûts d'exploitation liés à l'acquisition de nouveaux clients. <br> <br>Vous n'avez pas besoin de dépenser du temps et de l'argent pour convaincre un client existant de choisir votre entreprise plutôt que ses concurrents, car il a déjà pris cette décision.
+		</p>
+	</div>
+	
+	
+	
+	
+	<br><br><br><br>
+	
+	
+	<img id="img_4" src="{% static 'store/churn_im_4.png' %}"/>
+	
+	<div class="para_1">
+		<h3>FAÇONS DE RÉDUIRE VOTRE CHURN</h3>
+		<p class="text">
+			Plutôt que de se concentrer uniquement sur l'offre d'incitations aux clients qui envisagent de se désengager, il pourrait être encore plus avantageux de mettre vos ressources en commun avec vos clients fidèles et rentables. <br> <br>Utilisez vos clients désabonnés pour comprendre pourquoi les clients partent. Analysez comment et quand le taux de désabonnement se produit au cours de la vie d'un client au sein de votre entreprise, et utilisez ces données pour mettre en place des mesures préventives. <br> <br>Au lieu d'attendre de vous connecter avec vos clients jusqu'à ce qu'ils vous contactent, essayez une approche plus proactive. Communiquez avec eux tous les avantages que vous offrez et montrez-leur que vous vous souciez de leur expérience, et ils ne manqueront pas de rester.
+		</p>
+	</div>
+	
+	
+	<br><br><br><br><br><br>
+	
+	
+	<a href="{% url 'simulation' %}">
+	<img class="zoom" src="{% static 'store/churn_button.PNG' %}"/>
+	</a>
+	
+	
+	<br><br><br><br>
+	
+	
+	<footer id="foot">
+		<img class="foot" src="{% static 'store/gradient_2.PNG' %}"/>
+	</footer>
+
+</body>
+</html>

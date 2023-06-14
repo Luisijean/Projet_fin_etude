@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'store/css_styles2.css' %}" type="text/css">
+
+
+</head>
+	
+<body>
+	<div id='navigation'>
+	<ul>
+		<li><a class="active" href="{% url 'index_movie_prediction' %}">HOME</a></li>
+  		<li><a href="{% url 'projet' %}">PROJECT</a></li>
+  		<li><a href="{% url 'simulation' %}">SIMULATION</a></li>
+  		<li style="float:right"><a href="{% url 'about' %}">ABOUT</a></li>
+	</ul>
+
+</div>
+
+<br><br>
+
+<div id='titrer'>
+<h1 style="text-align: center">Scores des différents models</h1>
+</div>
+
+<br>
+
+
+<body>
+	<table>
+  <thead>
+    <tr>
+      <th>model_name</th>
+      <th>acc_score</th>
+      <th>roc_score</th>
+      <th>prec_score</th>
+      <th>rec_score</th>
+      <th>lift_xp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Extra Trees Classifier</strong></td>
+      <td>89.72</td>
+      <td>89.65</td>
+      <td>92.01</td>
+      <td>86.49</td>
+      <td><strong>2.0307004391711962</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Random Forest Classifier</strong></td>
+      <td>86.6</td>
+      <td>86.48</td>
+      <td>90.19</td>
+      <td>81.44</td>
+      <td>2.025779044098773</td>
+    </tr>
+    <tr>
+      <td><strong>XGB Classifier</strong></td>
+      <td>86.27</td>
+      <td>86.22</td>
+      <td>87.45</td>
+      <td>83.97</td>
+      <td>2.005861981748915</td>
+    </tr> 
+    <tr>
+      <td><strong>SVC rbf kernel</strong></td>
+      <td>83.46</td>
+      <td>83.48</td>
+      <td>82.42</td>
+      <td>84.11</td>
+      <td>1.9964003686274578</td>
+    </tr>					
+    <tr>
+      <td><strong>Gradient Boosting Classifier</strong></td>
+      <td>81.03</td>
+      <td>81.06</td>
+      <td>79.45</td>
+      <td>82.54</td>
+      <td>1.9888310781302923</td>
+    </tr>
+    <tr>
+      <td><strong>ADA Boost Classifier</strong></td>
+      <td>78.89</td>
+      <td>78.93</td>
+      <td>77.12</td>
+      <td>80.79</td>
+      <td>1.909353527910052</td>
+    </tr>
+    <tr>
+      <td><strong>Logistic Regression</strong></td>
+      <td>79.16</td>
+      <td>79.25</td>
+      <td>76.17</td>
+      <td>83.48</td>
+      <td>1.8752917206728064</td>
+    </tr>
+    <tr>
+      <td><strong>K-Neighbors Classifier</strong></td>
+      <td>86.0</td>
+      <td>86.19</td>
+      <td>80.37</td>
+      <td>94.44</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Decision Tree Classifier</strong></td>
+      <td>72.56</td>
+      <td>72.58</td>
+      <td>71.45</td>
+      <td>73.07</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td><strong>Neural Network</strong></td>
+      <td>74.76</td>
+      <td>74.68</td>
+      <td>75.79</td>
+      <td>71.07</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+	<br><br><br>
+	
+
+	<footer id="foot">
+		<img class="foot" src="{% static 'store/gradient_2.PNG' %}"/>
+	</footer>
+	
+</body>
+</html>

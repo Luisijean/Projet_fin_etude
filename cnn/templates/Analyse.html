@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Churn Prediction - Exploratory Analysis Page</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'store/css_styles.css' %}" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'store/assets/css/main.css' %}">
+</head>
+	
+<body>
+	<div id='navigation'>
+	<ul>
+		<li><a class="active" href="{% url 'index_movie_prediction' %}">HOME</a></li>
+  		<li><a href="{% url 'projet' %}">PROJECT</a></li>
+  		<li><a href="{% url 'simulation' %}">SIMULATION</a></li>
+  		<li style="float:right"><a href="{% url 'about' %}">ABOUT</a></li>
+	</ul>
+	</div>
+	 
+	<h1 style="margin-left: 600px"><strong>Analyse Graphique</strong></h1>
+	<br><br>
+      <section id="featured">
+      <div class="wrapper">
+        <div class="blurb">
+          <h2><strong>Graphe des Validations Croisées des modèles</strong></h2>
+          <p>ExtraTrees, RandomForest, XGB</p>
+          <p>Les courbes représentent ici les recall scores obtenus pour chacun des modèles à l’algorithme de validation croisée sur les 5 couches pour lesquelles on teste nos modèles.On constate que le modèle ExtraTrees a obtenu un ensemble très homogène de recall score lors des tests sur les différentes couches, même si une légère variation nous montre que l’on a affaire à de l’overfitting. Concernant le RandomForest et le XGB ils ont des recall scores plus faibles que le premier modèle ainsi qu’une plus grande variation de scores, indiquant un réel problème d’overfitting.</p>
+        </div>
+        <div class="featured"><img src="{% static 'store/image33.png' %}" alt="Featured"></div>
+      </div>
+    </section>
+ 
+	 
+    <section id="about">
+      <div class="wrapper">
+        <div class="camera" ><img src="{% static 'store/101.png' %}" alt="Camera"></div>
+        <div class="blurb">
+          <h2><strong>Courbe ROC</strong></h2>
+          <p>L’analyse de la courbe ROC se fait par rapport a l’aire sous la courbe et l’allure de la courbe. Plus une courbe est éloignée de la courbe à 45°, plus le test est précis. La performance est jugée par rapport à la proximité de la courbure de la courbe avec le coin en haut à gauche.On constate donc en traçant cette courbe pour l’évaluation de notre modèle avec la fonction ‘best estimator’ que notre modèle est assez performant et précis. On souhaite cependant l’améliorer le plus possible afin de pouvoir réduire au maximum dans la matrice de confusion le Faux Négatifs (FN).Pour pouvoir améliorer ces résultats, il est d’abord important de savoir quels paramètres sont les plus important de notre base de données</p>
+         
+        </div>
+      </div>
+    </section>
+    <section id="featured">
+      <div class="wrapper">
+        <div class="blurb">
+          <h2><strong>Graphe d’importance des données</strong> </h2>
+          <p>On affiche ici les 25 colonnes de données classées par ordre d’importance dans l’utilisation de notre modèle. On utilise ici ExtraTreesClassifier comme modèle pour déterminer l’importance des paramètres car il est le plus adapté pour cela.</p>
+        </div>
+        <div class="featured"><img src="{% static 'store/102.png' %}" alt="Featured"></div>
+      </div>
+    </section>
+    <section id="hero">
+      
+      <div class="wrapper">
+        <div class="welcome">
+          <h1><strong>Graphe de corrélation des 50 variables les plus importantes</strong></h1>
+          <p>On constate que de manière générale les variables sont peu corrélées entre elles. Nous choisissons pour la suite de l’analyse les 9 variables les moins corrélées pour que les changements effectués sur l’une n’impactent pas positivement ou négativement l’autre.</p>
+        </div>
+        <div class="photographer"><img src="{% static 'store/103.png' %}" alt="Photographer"></div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="wrapper">
+        <div class="camera"><img src="{% static 'store/104.png' %}" alt="Camera"></div>
+        <div class="blurb">
+          <h2><strong>Graphe ROC après traitement du déséquilibre des données</strong></h2>
+          <p>On constate que la performance est légèrement améliorée pour une précision du même calibre.</p>
+         
+        </div>
+      </div>
+    </section>
+    <section id="featured">
+      <div class="wrapper">
+        <div class="blurb">
+          <h2><strong>Graphe d’importance des 9 plus influentes variables</strong></h2>
+          <p>Proportion d’importance de chacune des ces variables en pourcentage.</p>
+          
+        </div>
+        <div class="featured"><img src="{% static 'store/105.png' %}" alt="Featured"></div>
+      </div>
+    </section>
+        </section>
+    <section id="featured">
+      <div class="wrapper">
+        <div class="blurb">
+          <h2><strong>Variables les plus importantes</strong></h2>
+          <p>total_og_mou_8 (nombre de minutes totales passées en appels sortants au cours du mois d’août), total_rech_num_8 (nombre total de recharges au cours du mois d’août), fb_user_8 (services pour bénéficier des services de Facebook et de sites de réseaux sociaux similaires), max_rech_amt_8 (le prix de recharge max au cours du mois d’août), aon (durée pendant laquelle l'utilisateur a été client de l'opérateur / du réseau particulier), roam_og_mou_8 (le nombre de minutes passées sur les données mobiles en appel au cours du mois d’août), arpu_8 (revenu moyen par utilisateur au cours du mois d’août), last_day_rch_amt_8 (dernier jour de recharge au cours du mois d’août), loc_og_t2m_mou_8 (le nombre de minutes passées en appels sortants vers un autre opérateur au cours du mois d’août)<br>
+</p>
+        </div>
+        <div class="featured"><img src="{% static 'store/106.png' %}" alt="Featured"></div>
+      </div>
+    </section>
+ 
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="{% static 'store/assets/js/functions-min.js' %}"></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+	<br><br><br>
+	
+	<br><br>
+	<footer id="foot">
+		<img class="foot" src="{% static 'store/gradient_2.PNG' %}"/>
+	</footer>
+	
+</body>
+</html>

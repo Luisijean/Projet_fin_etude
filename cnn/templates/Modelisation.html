@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Churn Prediction - Modelisation Page</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'store/css_styles.css' %}" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+</head>
+	
+<body>
+	<div id='navigation'>
+	<ul>
+		<li><a class="active" href="{% url 'index_movie_prediction' %}">HOME</a></li>
+  		<li><a href="{% url 'projet' %}">PROJECT</a></li>
+  		<li><a href="{% url 'simulation' %}">SIMULATION</a></li>
+  		<li style="float:right"><a href="{% url 'about' %}">ABOUT</a></li>
+	</ul>
+
+</div>
+
+
+
+<br>
+<br><br>
+
+
+<body>
+	<table id="table_cnn" class="display">
+	    <thead>
+	        <tr>
+	            <th>Numéro de téléphone</th>
+	            <th>Churn</th>
+	            <th>Prédictions</th>
+	            <th>Propension de Churn(%)</th>
+	            <th>Priorité</th>
+
+	        </tr>
+	    </thead>
+	    <tbody>
+
+	    	{% for a in list_churn %}
+
+	        <tr>
+	        	
+	        	
+	            <td>{{a.0}}</td>
+	          
+	            <td>{{a.1}}</td>
+	          
+	            <td>{{a.2}}</td>
+
+	            <td>{{a.3}}</td>
+	          
+	            <td>{{a.4}}</td>
+	          
+
+	        </tr>
+	     {% endfor %}
+	
+	    </tbody>
+	</table>
+
+	<br><hr><br>
+	<form  method='POST'  action=''> {% csrf_token %}  
+		<input type="search" name="search_title" style="float:left;padding:40px;margin-top:15px;margin-right: 10px;cursor: pointer;">
+		<input style="float:left;padding:40px;margin-top:15px;margin-right: 10px;cursor: pointer;" type="submit" name="nlp_search" value="Propension de Churn">
+	</form>
+	<br><br>
+	{% if response != None %}
+	<h2 style="background-color: darkblue ;color: white;padding: 25px;">Propension de Churn pour le numéro {{numero}} : {{response}}% <br> 
+	Degré de priorité: {{classement2}}</h2>
+	{% endif %}
+	
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript">
+	$(document).ready( function () {
+    $('#table_cnn').DataTable();
+} );
+</script>
+
+	<footer id="foot">
+		<img class="foot" src="{% static 'store/gradient_2.PNG' %}"/>
+	</footer>
+	
+</body>
+</html>

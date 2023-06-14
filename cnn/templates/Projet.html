@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Churn Prediction - Project Page</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'store/css_styles.css' %}" type="text/css">
+
+</head>
+
+<body>
+	
+	<ul>
+		<li><a class="active" href="{% url 'index_movie_prediction' %}">HOME</a></li>
+  		<li><a href="{% url 'projet' %}">PROJECT</a></li>
+  		<li><a href="{% url 'simulation' %}">SIMULATION</a></li>
+  		<li style="float:right"><a href="{% url 'about' %}">ABOUT</a></li>
+	</ul>
+	
+	<br><br><br>
+	
+	<div class="proj">
+		<h3>INTRODUCTION</h3>
+		<p class="text">
+		Nous nous plaçons dans la perspective d'une équipe data au service du service marketing d'un opérateur téléphonique en Asie du Sud-Est.
+		Dans le secteur des télécommunications, les clients peuvent facilement changer d'opérateur, ce qui génère un marché ultra-compétitif, avec des taux de désabonnement compris entre 15 et 25.
+		Étant donné que le coût pour obtenir un nouveau client est 5 à 10 fois plus élevé que celui pour en conserver un, la fidélisation des clients est plus importante que leur acquisition, à une époque où tout le monde a un téléphone. <br> <br>
+		En général, l'objectif le plus important des opérateurs est de conserver les clients les plus rentables.
+		L'idée est donc d'abord d'identifier ces clients, de prédire la probabilité de désabonnement et de mener des campagnes marketing ciblées pour essayer de réduire le taux de désabonnement global. <br> <br>
+		Nous disposons de différents indicateurs (KPI, Key Performance Indicator) répartis sur 4 mois, de juin à septembre.
+		L'objectif commercial est de prédire le taux de désabonnement des clients à forte valeur ajoutée au cours du 9e mois de l'année à l'aide des données des trois mois précédents. <br> <br>
+		Il s'agit d'un problème de churn classique où nous avons une période d'observation et où l'objectif est de prédire le churn des clients dans la période de churn (dans notre cas, septembre).
+		Il sera nécessaire de définir le taux de désabonnement et de définir les clients rentables.
+		</p>
+		
+		<br><br>
+		<h3>ÉTAPES</h3>
+		<img class="step_im" src="{% static 'store/steps_im.PNG' %}"/>
+		<img class="step_im" src="{% static 'store/page.png' %}"/>
+	</div>
+	
+	<br><br><br><br>
+	
+	
+	<footer id="foot">
+		<img class="foot" src="{% static 'store/gradient_2.PNG' %}"/>
+	</footer>
+	
+</body>
+</html>

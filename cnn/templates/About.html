@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Churn Prediction - About Page</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'store/css_styles.css' %}" type="text/css">
+
+</head>
+
+<body>
+	
+	<ul>
+		<li><a class="active" href="{% url 'index_movie_prediction' %}">HOME</a></li>
+  		<li><a href="{% url 'projet' %}">PROJECT</a></li>
+  		<li><a href="{% url 'simulation' %}">SIMULATION</a></li>
+  		<li style="float:right"><a href="{% url 'about' %}">ABOUT</a></li>
+	</ul>
+	
+	<img class="img_us" src="{% static 'store/Us_im.PNG' %}"/>
+	
+	<br><br><br><br>
+	
+	
+	<footer id="foot">
+		<img class="foot" src="{% static 'store/gradient_2.PNG' %}"/>
+	</footer>
+	
+</body>
+</html>

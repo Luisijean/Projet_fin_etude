@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CHURN PREDICTION</title>
+	<link rel="stylesheet" href="css_styles.css">
+
+</head>
+
+<body>
+	<div class="imgbox">
+			<img class="image" src="churn_im.png"/>
+	</div>
+	<img class="grad" src="gradient.PNG"/>
+	<ul>
+		<li><a class="active" href="#accueil">Accueil</a></li>
+  		<li><a href="#projet">Projet</a></li>
+  		<li><a href="#simulateur">Simulateur</a></li>
+  		<li style="float:right"><a href="#apropos">A propos</a></li>
+	</ul>
+	
+	<br><br><br><br>
+	
+	
+	<img id="img_2" src="churn_im_2.png"/>
+	
+	<div class="para_1">
+		<h3>WHAT IS CHURN ?</h3>
+		<p class="text">
+			Customer churn is the percentage of customers that stopped using your company's product or service during a certain time frame. <br><br>
+			You can calculate churn rate by dividing the number of customers you lost during that time period -- say a quarter -- by the number of customers you had at the beginning of that time period.<br><br>
+			Your company should aim for a churn rate that is as close to 0% as possible.<br><br>
+			In order to do this, your company has to be on top of its churn rate at all times and treat it as a top priority.
+		</p>
+	</div>
+	
+	
+
+	
+	<br><br><br><br>
+	
+	
+	<img id="img_3" src="churn_im_3.png"/>
+	
+	<div class="para_2">
+		<h3 id="title_2">WHY IS CHURN IMPORTANT ?</h3>
+		<p class="text">
+			Churn rate is important because it costs more to acquire new customers than it does to retain existing customers.<br><br>
+			In fact, an increase in customer retention of just 5% can create at least a 25% increase in profit.<br><br>
+			This is because returning customers will likely spend 67% more on your company's products and services. <br><br>
+			As a result, your company can spend less on the operating costs of having to acquire new customers. <br><br>
+			You don't need to spend time and money on convincing an existing customer to select your company over competitors because they've already made that decision.
+		</p>
+	</div>
+	
+	
+	
+	
+	<br><br><br><br>
+	
+	
+	<img id="img_4" src="churn_im_4.png"/>
+	
+	<div class="para_1">
+		<h3>WAYS TO REDUCE YOUR CHURN</h3>
+		<p class="text">
+			Rather than simply focusing on offering incentives to customers who are considering churning, it could be even more beneficial to pool your resources into your loyal, profitable customers.<br><br>
+			Use your churned customers as a means of understanding why customers are leaving. Analyze how and when churn occurs in a customer's lifetime with your company, and use that data to put into place preemptive measures.<br><br>
+			Instead of waiting to connect with your customers until they reach out to you, try a more proactive approach. Communicate with them all the perks you offer and show them you care about their experience, and they'll be sure to stick around.
+		</p>
+	</div>
+	
+	
+	<br><br><br><br><br><br>
+	
+	<img class="zoom" src="churn_button.PNG"/>
+
+	<br><br><br><br>
+	
+	
+	<footer id="foot">
+		<img class="foot" src="gradient_2.PNG"/>
+	</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@charset "utf-8";
+
+body {
+	width: 100%;
+	background-color: whitesmoke;
+  	font-size: 20px;
+	font-family : Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	margin: 0 auto;
+}
+
+
+ul {
+	font-weight: bold;
+  	list-style-type: none;
+  	margin: -5px;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: gray;
+  	position: -webkit-sticky; /* Safari */
+  	position: sticky;
+  	top: 0;
+}
+
+
+
+li {
+  	float: left;
+	border-right:1px solid white;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+li:last-child {
+  	border-right: none;
+}
+
+li a {
+	background-color: gray;
+	font : Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 20px 24px;
+  	text-decoration: none;
+}
+
+
+li a:hover {
+  	background-color: #f6bd97;
+	color: white;
+}
+
+h3 {
+	color: #F2A672;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-weight: bold;
+	font-size: 50px;
+}
+
+
+
+.imgbox {
+  	background-color: #ebeff2;
+  	display: grid;
+}
+
+.image {
+	width: 50%;
+  	height: auto;
+  	margin: auto;
+}
+
+.zoom {
+	box-shadow: 0 10px 20px -2px gray;
+	border-radius: 10px;
+	max-width: 30%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+  	transition: transform .3s;
+}
+
+.zoom:hover {
+  	-ms-transform: scale(1.2); /* IE 9 */
+  	-webkit-transform: scale(1.2); /* Safari 3-8 */
+  	transform: scale(1.2); 
+}
+
+
+.grad {
+	width: 100%;
+}
+
+
+.text {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.para_1 {
+	padding-left: 8%;
+	padding-right: 45%;
+	text-align: justify;
+}
+
+
+.para_2 {
+	padding-left: 45%;
+	padding-right: 8%;
+	text-align: justify;
+}
+
+
+#title_2 {
+	text-align: right;
+}
+
+
+#img_2 {
+	float: right;
+	width: 50%;
+	padding-top:100px;
+}
+
+#img_3 {
+	float: left;
+	width: 28%;
+	padding-top:100px;
+	padding-left: 10%;
+}
+
+#img_4 {
+	float: right;
+	width: 40%;
+	padding-top:100px;
+	padding-right: 3%;
+}
+
+.foot {
+	width: 100%;
+	bottom: 0;
+
+}
+
